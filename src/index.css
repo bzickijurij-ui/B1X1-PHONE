@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+/* Custom extra utilities for bouncy spring/rubber feelings like iOS or custom custom animations */
+@layer utilities {
+  .ios-elastic {
+    transition-timing-function: cubic-bezier(0.25, 1.4, 0.5, 1);
+  }
+}
+
+/* Simulated screen scanlines or OLED effects (ultra optional but elegant) */
+.oled-glass {
+  backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .oled-glass {
+  background-color: rgba(15, 15, 25, 0.55);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  10% { transform: translate(-3px, 2px) rotate(-1deg); }
+  20% { transform: translate(2px, -3px) rotate(1.5deg); }
+  30% { transform: translate(-4px, 1px) rotate(-1.5deg); }
+  40% { transform: translate(3px, -2px) rotate(1deg); }
+  50% { transform: translate(-2px, 3px) rotate(-1deg); }
+  60% { transform: translate(3px, -1px) rotate(1.5deg); }
+  70% { transform: translate(-3px, -2px) rotate(-1deg); }
+  80% { transform: translate(2px, 3px) rotate(0.5deg); }
+  90% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+}
+
+.animate-shake-crazy {
+  animation: shake 0.15s infinite;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(155, 155, 155, 0.3);
+  border-radius: 999px;
+}

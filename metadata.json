@@ -1,0 +1,6 @@
+{
+  "name": "B1X1 OS",
+  "description": "B1X1 OS - Interactive test operating system simulation with beautiful widgets, smooth custom One UI 7 / iOS 18 animations, tinted icon customizable theme, real camera app, and integrated gallery.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
